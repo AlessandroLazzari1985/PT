@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "PT.BatchImport": {
+      "commandName": "Project"
+    }
+  }
+}
