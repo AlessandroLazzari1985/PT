@@ -9,9 +9,9 @@ namespace PT.Data
 			: base(options)
 		{ }
 
-		private DbSet<Country> Country { get; set; }
-		private DbSet<Company> Company { get; set; }
-		private DbSet<Account> Account { get; set; }
+		public DbSet<Country> Country { get; set; }
+		public DbSet<Company> Company { get; set; }
+		public DbSet<Account> Account { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
