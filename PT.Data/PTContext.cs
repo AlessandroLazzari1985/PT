@@ -12,6 +12,7 @@ namespace PT.Data
 		public DbSet<Country> Country { get; set; }
 		public DbSet<Company> Company { get; set; }
 		public DbSet<Account> Account { get; set; }
+		public DbSet<Service> Service { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{

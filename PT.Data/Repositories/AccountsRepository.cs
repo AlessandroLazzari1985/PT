@@ -1,8 +1,7 @@
 ﻿using PT.Domain;
+using PT.Domain.WebApi;
 using System.Collections.Generic;
 using System.Linq;
-using PT.Domain.WebApi;
-using PT.WebApi.Model;
 
 namespace PT.Data.Repositories
 {

@@ -17,6 +17,7 @@ namespace PT.WebApi.OData
 			builder.EntitySet<Country>("Countries");
 			builder.EntitySet<Company>("Companies");
 			builder.EntitySet<Account>("Accounts");
+			builder.EntitySet<Service>("Services");
 
 			return builder.GetEdmModel();
 		}

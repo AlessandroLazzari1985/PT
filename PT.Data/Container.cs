@@ -9,6 +9,7 @@ namespace PT.Data
 		{
 			collection.AddScoped<AccountsRepository>();
 			collection.AddScoped<CompaniesRepository>();
+			collection.AddScoped<ServiceRepository>();
 
 			return collection;
 		}
