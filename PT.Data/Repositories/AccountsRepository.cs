@@ -34,14 +34,32 @@ namespace PT.Data.Repositories
 			return currentAccount;
 		}
 
-		public Company PatchUpdate(int id, AccountRaw currentItem)
+		public Account PatchUpdate(int id, AccountRaw currentItem)
 		{
-			var result = _context.Company.Single(x => x.Id == id);
+			var actual = _context.Account.Single(x => x.Id == id);
 
+			if (currentItem.CompanyId != default)
+				actual.CompanyId = currentItem.CompanyId;
+
+			if (currentItem.Link != default)
+				actual.Link = currentItem.Link;
+
+
+			if (currentItem.Notes != default)
+				actual.Notes = currentItem.Notes;
+
+			if (currentItem.Password != default)
+				actual.Password = currentItem.Password;
+
+			if (currentItem.Start != default)
+				actual.Start = currentItem.Start;
+
+			if (currentItem.Username != default)
+				actual.Username = currentItem.Username;
 
 			_context.SaveChanges();
 
-			return result;
+			return actual;
 		}
 
 		public void Delete(int key)

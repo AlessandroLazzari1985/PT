@@ -37,7 +37,7 @@ namespace PT.WebApi.Controllers
 		}
 
 		[HttpPost, ODataRoute("Accounts")]
-		public ActionResult<Account> AddAccount(Account account)
+		public ActionResult<Account> AddAccount([FromBody] Account account)
 		{
 			if (!ModelState.IsValid)
 				BadRequest(ModelState);
@@ -51,7 +51,7 @@ namespace PT.WebApi.Controllers
 		}
 
 		[HttpPut, ODataRoute("Accounts")]
-		public ActionResult<Account> PutAccount([FromODataUri] int key, Account account)
+		public ActionResult<Account> PutAccount([FromODataUri] int key, [FromBody] Account account)
 		{
 			if (!ModelState.IsValid)
 				BadRequest(ModelState);
@@ -75,6 +75,8 @@ namespace PT.WebApi.Controllers
 			if (!ModelState.IsValid)
 				BadRequest(ModelState);
 
+
+			_repository.PatchUpdate(key, accountRaw);
 
 			return Ok(accountRaw);
 		}
