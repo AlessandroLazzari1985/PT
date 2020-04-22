@@ -45,6 +45,7 @@ namespace PT.WebApi
 				app.UseDeveloperExceptionPage();
 			}
 
+			// Faccio la mia bella hotfix!
 			app.UseCors(opt => opt
 				.WithOrigins("http://localhost:4200", "http://localhost")
 				.AllowAnyHeader()
