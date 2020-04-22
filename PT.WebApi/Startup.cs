@@ -12,6 +12,7 @@ using PT.WebApi.OData;
 namespace PT.WebApi
 {
 	// Prova per creare un commit
+	// Questa è la MasterHofFix Step I
 	public class Startup
 	{
 		// This method gets called by the runtime. Use this method to add services to the container.
